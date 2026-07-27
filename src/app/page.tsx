@@ -5,15 +5,15 @@ export default function Home() {
     <div className="space-y-6">
       <h1 className="text-3xl font-bold">Merhaba, ben Emir 👋</h1>
       <p className="text-black/70 dark:text-white/70">
-        Bu benim kişisel sitem. Burada{" "}
-        <Link href="/projeler" className="underline underline-offset-4">
-          projelerimi
-        </Link>{" "}
-        ve{" "}
+        SEO/GEO danışmanlığı ve trading konularında kendimi geliştiriyorum, öğrendiklerimi{" "}
         <Link href="/blog" className="underline underline-offset-4">
-          blog yazılarımı
+          Günlük
         </Link>{" "}
-        bulabilirsin.
+        sayfasında, ortaya çıkan işleri de{" "}
+        <Link href="/projeler" className="underline underline-offset-4">
+          Projeler
+        </Link>{" "}
+        sayfasında paylaşıyorum.
       </p>
     </div>
   );

@@ -22,6 +22,7 @@ const posts = await Promise.all(
       title: data.title,
       date: data.date,
       excerpt: data.excerpt,
+      category: data.category ?? "genel",
       html,
     };
   }),
