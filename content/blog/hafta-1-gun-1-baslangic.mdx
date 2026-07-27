@@ -5,8 +5,161 @@ excerpt: "SEO/GEO danışmanlığı ve trading öğrenimine yeni bir yolculuk ba
 category: "genel"
 ---
 
-Bu siteyi bugün kurdum: Next.js ile yazdım, Cloudflare Workers üzerinde yayınladım. Amacı bir vitrin olmaktan çok, önümdeki haftalarda öğrendiklerimi düzenli olarak yazacağım bir günlük. Kim olduğumu [Hakkımda](/hakkimda) sayfasında anlattım, burada tekrar etmeyeceğim.
+Bu siteyi bugün kurdum: Amacı bir vitrin olmaktan çok, önümdeki haftalarda öğrendiklerimi düzenli olarak yazacağım bir günlük. Kim olduğumu [Hakkımda](/hakkimda) sayfasında anlattım, burada tekrar etmeyeceğim.
 
-Bugün siteyi kurup blogu SEO/GEO ve trading olarak iki kategoriye ayırdım, ayrıca 10 haftalık bir öğrenme planı çıkardım. Bundan sonraki yazılar bu planın günlük/haftalık ilerleyişini takip edecek.
+Ayrıca 10 haftalık bir öğrenme planı çıkardım. Bundan sonraki yazılar bu planın günlük/haftalık ilerleyişini takip edecek.
+
+---
+
+Üzerinde çalışacağım piyasalarda en uygun emir tiplerini, bunların ne zaman ve hangi şartlarda kullanılması gerektiğini pekiştirdim. Genel olarak limit ve stop-limit emirlerini kullanmanın en sağlıklısı olduğunu, ama önemli haber anlarında market emrinden çekinmemem gerektiğini not ettim.
+
+TradingView'da bir demo trading hesabı açtım ve işlem yapacağım her piyasa için ayrı bir alt hesap oluşturdum:
+
+- **BIST**: kaldıraç 1:1, bütçe 100.000 TRY
+- **ABD hisseleri (spot)**: kaldıraç 1:1, bütçe 1.000 USD
+- **XAUUSD**: kaldıraç 1:10, bütçe 1.000 USD
+- **Kripto spot**: kaldıraç 1:1, bütçe 1.000 USD
+- **Kripto futures**: kaldıraç 1:10, bütçe 1.000 USD
+
+Bu dört piyasanın temel özelliklerini karşılaştıran bir tablo hazırladım:
+
+<div style="overflow-x:auto;">
+<table style="width:100%; border-collapse:collapse; table-layout:fixed; border:1px solid rgba(128,128,128,0.3);">
+<colgroup>
+  <col style="width:16%" />
+  <col style="width:21%" />
+  <col style="width:21%" />
+  <col style="width:21%" />
+  <col style="width:21%" />
+</colgroup>
+  <thead>
+    <tr>
+      <th style="text-align:center; vertical-align:middle; padding:8px 10px; background:rgba(128,128,128,0.08); border:1px solid rgba(128,128,128,0.3);">Özellik</th>
+      <th style="text-align:center; vertical-align:middle; padding:8px 10px; background:rgba(128,128,128,0.08); border:1px solid rgba(128,128,128,0.3);">🏦 BIST</th>
+      <th style="text-align:center; vertical-align:middle; padding:8px 10px; background:rgba(128,128,128,0.08); border:1px solid rgba(128,128,128,0.3);">📈 ABD borsaları</th>
+      <th style="text-align:center; vertical-align:middle; padding:8px 10px; background:rgba(128,128,128,0.08); border:1px solid rgba(128,128,128,0.3);">🥇 XAU / altın</th>
+      <th style="text-align:center; vertical-align:middle; padding:8px 10px; background:rgba(128,128,128,0.08); border:1px solid rgba(128,128,128,0.3);">₿ Kripto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="vertical-align:middle; text-align:center; padding:10px; border:1px solid rgba(128,128,128,0.3); background:rgba(128,128,128,0.04);"><strong>Seans</strong><br />(TR saati)</td>
+      <td style="vertical-align:middle; text-align:center; padding:10px; border:1px solid rgba(128,128,128,0.3);">10:00–18:00</td>
+      <td style="vertical-align:middle; text-align:center; padding:10px; border:1px solid rgba(128,128,128,0.3);">16:30–23:00 (yaz saati)<br />17:30–24:00 (kış saati)</td>
+      <td style="vertical-align:middle; text-align:center; padding:10px; border:1px solid rgba(128,128,128,0.3);">Pazar 24:00 – Cuma 24:00</td>
+      <td style="vertical-align:middle; text-align:center; padding:10px; border:1px solid rgba(128,128,128,0.3);">7/24</td>
+    </tr>
+    <tr>
+      <td style="vertical-align:middle; text-align:center; padding:10px; border:1px solid rgba(128,128,128,0.3); background:rgba(128,128,128,0.04);"><strong>Fiyatı etkileyen faktörler</strong></td>
+      <td style="vertical-align:middle; text-align:center; padding:10px; border:1px solid rgba(128,128,128,0.3);">
+        <ul style="margin:0; padding:0; list-style-position:inside; text-align:center;">
+          <li>TCMB faiz kararları</li>
+          <li>TL kur seviyesi</li>
+          <li>TÜİK enflasyon verisi</li>
+          <li>Şirket bilançoları</li>
+          <li>Yabancı giriş-çıkışı</li>
+          <li>Kredi notu değişimi</li>
+        </ul>
+      </td>
+      <td style="vertical-align:middle; text-align:center; padding:10px; border:1px solid rgba(128,128,128,0.3);">
+        <ul style="margin:0; padding:0; list-style-position:inside; text-align:center;">
+          <li>Fed faiz kararı (FOMC)</li>
+          <li>İstihdam verisi (NFP)</li>
+          <li>Enflasyon (CPI/PCE)</li>
+          <li>Kazanç sezonu</li>
+          <li>10 yıllık tahvil faizi</li>
+          <li>Jeopolitik şoklar</li>
+        </ul>
+      </td>
+      <td style="vertical-align:middle; text-align:center; padding:10px; border:1px solid rgba(128,128,128,0.3);">
+        <ul style="margin:0; padding:0; list-style-position:inside; text-align:center;">
+          <li>Reel faiz oranı</li>
+          <li>Dolar endeksi (DXY)</li>
+          <li>Merkez bankası alımları</li>
+          <li>Güvenli liman talebi</li>
+          <li>Fed faiz beklentisi</li>
+        </ul>
+      </td>
+      <td style="vertical-align:middle; text-align:center; padding:10px; border:1px solid rgba(128,128,128,0.3);">
+        <ul style="margin:0; padding:0; list-style-position:inside; text-align:center;">
+          <li>Genel risk iştahı</li>
+          <li>Düzenleme haberleri</li>
+          <li>Kurumsal ETF akışları</li>
+          <li>Kaldıraçlı likidasyonlar</li>
+          <li>Büyük yatırımcı hareketi</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align:middle; text-align:center; padding:10px; border:1px solid rgba(128,128,128,0.3); background:rgba(128,128,128,0.04);"><strong>Ana riskler</strong></td>
+      <td style="vertical-align:middle; text-align:center; padding:10px; border:1px solid rgba(128,128,128,0.3);">
+        <ul style="margin:0; padding:0; list-style-position:inside; text-align:center;">
+          <li>Kur riski</li>
+          <li>Siyasi/jeopolitik risk</li>
+          <li>Düşük likidite (bazı hisseler)</li>
+        </ul>
+      </td>
+      <td style="vertical-align:middle; text-align:center; padding:10px; border:1px solid rgba(128,128,128,0.3);">
+        <ul style="margin:0; padding:0; list-style-position:inside; text-align:center;">
+          <li>Yüksek değerleme riski</li>
+          <li>Ani faiz artışı riski</li>
+          <li>Jeopolitik şok riski</li>
+        </ul>
+      </td>
+      <td style="vertical-align:middle; text-align:center; padding:10px; border:1px solid rgba(128,128,128,0.3);">
+        <ul style="margin:0; padding:0; list-style-position:inside; text-align:center;">
+          <li>Faiz getirmemesi</li>
+          <li>Dolar güçlenmesi riski</li>
+          <li>Ani kâr satışı dalgaları</li>
+        </ul>
+      </td>
+      <td style="vertical-align:middle; text-align:center; padding:10px; border:1px solid rgba(128,128,128,0.3);">
+        <ul style="margin:0; padding:0; list-style-position:inside; text-align:center;">
+          <li>Düzenleyici belirsizlik</li>
+          <li>Hack/güvenlik riski</li>
+          <li>Aşırı volatilite</li>
+          <li>Kaldıraç likidasyon riski</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+---
+
+Bu piyasaları etkileyebilecek, son 3 ayda yaşanan önemli gelişmeleri de araştırdım:
+
+**Fed (ABD Merkez Bankası)**
+
+17 haziranda Fed Başkanı, faizin indirileceği beklentisinin aksine faizin artabileceği mesajını verdi. 8 temmuzda Trump, İran'la ateşkesin bittiğini açıkladı; bu petrol fiyatlarına yansıdı ve enflasyon endişesini artırdı.
+
+**TCMB (Türkiye Cumhuriyet Merkez Bankası)**
+
+Haziran ve temmuzda faiz üst üste 3. toplantıda da %37'de sabit tutuldu. İndirim dönemi durakladı, "bekle ve izle" moduna geçildi. Sebebi enflasyonun istenilen kadar düşmemesi ve enerji fiyatlarının tekrar yükselme eğilimi göstermesi. TL nispeten sakin kaldı ama enflasyonla mücadelenin yavaşladığı belli.
+
+**Kripto**
+
+Bitcoin, 2025 ekim ayındaki rekor fiyatından (126.000 dolar) haziran başında 58.000 dolar seviyelerine geriledi. Sebepleri: İran gerginliği, Fed'in faiz artabilir mesajı ve Avrupa'da kripto şirketlerine getirilen yeni lisans zorunluluğu. Sonuç: spot dayandı, kaldıraçlı pozisyonların çoğu silindi.
+
+**Altın**
+
+Ocak ayında tarihi rekor kırmıştı. Fed'in faiz mesajı, yükselen enerji fiyatları ve beklenenden güçlü gelen istihdam verisi altını aşağı çekti (istihdam güçlüyse ekonomi güçlüdür, ekonomi güçlüyse Fed'in faiz indirmesine gerek kalmaz mantığıyla). Normalde İran savaşı alevlendiğinde bile yükselen altın, bu kez faiz artış beklentisi yüzünden olumsuz etkilendi. Güçlü istihdam haberi bazen piyasalar için kötü habere dönüşebiliyor. Sonuç: ocaktan bu yana düşüş/düzeltme hâlâ sürüyor.
+
+---
+
+Günü, SEO'da "kırmızı çizgiler" dediğimiz ilk 5 kuralı pekiştirerek kapattım. Müşteri sitesine dokunmadan önce asla unutmamam gerekenler:
+
+- **Noindex etiketi**: Sayfanın kodunda, onu Google'da gösterme demek olan gizli bir etiket olabilir. Bunu fark etmezsem sayfa Google'dan tamamen kaybolabilir.
+- **Yönlendirmesiz URL değişikliği**: Bir sayfanın URL'si değişip eski URL'den yeniye yönlendirme kurulmazsa, hem ziyaretçi hem Google 404 hatası görür ve o sayfaya birikmiş itibar boşa gider.
+- **Kelime doldurma**: Aynı anahtar kelimeyi metne doğal olmayan bir sıklıkla zorlamak; Google bunu spam sayıp cezalandırabilir.
+- **Tekrarlanan başlıklar**: Sitedeki sayfaların başlıkları aynıysa, Google hangi sayfanın ne olduğunu ayırt edemeyebilir.
+- **Link alan sayfayı silmek/değiştirmek**: Dışarıdan çok link alan bir sayfayı silmeden önce mutlaka kontrol etmeliyim; silmek yerine URL yönlendirmesi de kullanabilirim.
+
+Şu an bunlar benim için teorik bilgi, ama ilerleyen haftalarda gerçek bir müşterinin sitesine dokunmaya başladığımda bu 5 kural asla atlamayacağım bir kontrol listesi olacak.
+
+---
+
+Yarın mum formasyonlarını (candlestick) pekiştireceğim, gerçek grafiklerde trend/destek/direnç çizeceğim ve SEO'nun kırmızı çizgilerinin kalan 5 maddesini öğreneceğim.
 
 *Not: Trading ile ilgili yazılar kişisel öğrenme sürecimin kaydıdır, yatırım tavsiyesi değildir.*

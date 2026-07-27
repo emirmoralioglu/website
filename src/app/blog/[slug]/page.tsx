@@ -27,7 +27,7 @@ export default async function BlogPostPage({ params }: Props) {
       <span className="inline-block rounded-full bg-black/5 px-2.5 py-0.5 text-xs font-medium text-black/60 no-underline dark:bg-white/10 dark:text-white/60">
         {CATEGORY_LABELS[post.meta.category]}
       </span>
-      <h1>{post.meta.title}</h1>
+      <h1 className="text-2xl">{post.meta.title}</h1>
       <p className="text-sm text-black/50 dark:text-white/50">{post.meta.date}</p>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       {post.meta.category === "trading" && (

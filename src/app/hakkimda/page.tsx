@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="space-y-6">
-      <h1 className="text-3xl font-bold">Hakkımda</h1>
+      <h1 className="text-2xl font-bold">Hakkımda</h1>
       <div className="space-y-4 text-black/70 dark:text-white/70">
         <p>
           Yaşar Üniversitesi&apos;nde (%100 İngilizce) işletme okudum. Dış

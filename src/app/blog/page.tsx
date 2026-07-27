@@ -12,7 +12,7 @@ export default function BlogPage() {
   return (
     <div className="space-y-8">
       <div className="space-y-2">
-        <h1 className="text-3xl font-bold">Günlük</h1>
+        <h1 className="text-2xl font-bold">Günlük</h1>
         <p className="text-black/70 dark:text-white/70">
           SEO/GEO ve trading üzerine öğrendiklerimin günlük/haftalık kaydı.
         </p>

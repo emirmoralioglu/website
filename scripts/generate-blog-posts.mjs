@@ -16,7 +16,9 @@ const posts = await Promise.all(
     const slug = file.replace(/\.mdx$/, "");
     const source = fs.readFileSync(path.join(BLOG_DIR, file), "utf8");
     const { data, content } = matter(source);
-    const html = String(await remark().use(remarkHtml).process(content));
+    const html = String(
+      await remark().use(remarkHtml, { sanitize: false }).process(content),
+    );
     return {
       slug,
       title: data.title,
