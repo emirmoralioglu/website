@@ -12,11 +12,8 @@ export function Nav() {
   return (
     <header className="border-b border-black/10 dark:border-white/10">
       <nav className="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-6 py-4">
-        <Link href="/" className="whitespace-nowrap">
-          <span className="block text-xl font-semibold">Emir Moralıoğlu</span>
-          <span className="block text-sm text-black/40 dark:text-white/40">
-            Trust the process
-          </span>
+        <Link href="/" className="whitespace-nowrap text-xl font-semibold">
+          Emir Moralıoğlu
         </Link>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
           <ul className="flex flex-wrap gap-x-6 gap-y-1 text-base">
