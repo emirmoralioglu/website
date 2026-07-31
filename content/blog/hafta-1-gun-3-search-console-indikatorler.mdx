@@ -1,0 +1,66 @@
+---
+title: "Hafta 1, Gün 3: Search Console, Hareketli Ortalamalar ve RSI"
+date: "2026-07-29"
+excerpt: "Google Search Console'u kurdum, SMA/EMA farkını, Golden Cross/Death Cross ve RSI'ı örneklerle pekiştirdim."
+category: "genel"
+---
+
+Bugün 10 haftalık planımın 3. gününe geldim ve Google Search Console'u kendi sitem için kurdum.
+
+İşte yaptıklarım:
+
+- **Mülk ekleme ve doğrulama**: Search Console'a sitemi ekledim, DNS kaydıyla doğrulama yaptım. Domain sağlayıcımda bir DNS kaydı ekleyerek Google'a "bu site gerçekten benim" dedim.
+- **"Veri işleniyor" mesajı normalmiş**: Hem Sayfa sayısı hem Performans raporunda "veri işleniyor, birkaç gün içinde tekrar kontrol edin" yazıyordu. Yeni doğrulanmış bir site için bu tamamen normalmiş, birkaç gün bekleyip tekrar bakacağım.
+- **Sitemap gönderdim**: sitemap.xml dosyamı Search Console'a gönderdim, durumu hemen "Başarılı" oldu. Yani Google artık sitemin haritasını biliyor, taramaya başlayacak.
+
+Bugün öğrendiğim en önemli şey: SEO araçlarında bazen "hiçbir şey olmuyor gibi görünmesi" aslında bir sorun değil, sadece zamana ihtiyaç var. Sabırlı olmak da bu işin bir parçası.
+
+---
+
+Gelelim indikatörlere.
+
+**SMA (Basit Hareketli Ortalama)**: Son N günün fiyatlarının eşit ağırlıklı ortalaması. Örneğin 50 günlük SMA, son 50 günün kapanış fiyatlarını toplayıp 50'ye böler.
+
+**EMA (Üssel Hareketli Ortalama)**: Aynı mantık ama son fiyatlara daha fazla ağırlık verir, bu yüzden fiyat değişimine SMA'dan daha hızlı tepki verir.
+
+Pratik fark: SMA daha "yumuşak" ve gecikmeli çizgi çizer, EMA daha "keskin" ve güncel fiyata daha yakın hareket eder. Kısa vadeli trader'lar genelde EMA'yı tercih eder çünkü daha hızlı sinyal verir.
+
+Örneğin 30-60 günlük bir trade amaçlıyorsam SMA ve EMA'yı 50 periyotta kullanabilirim, sonuçlarını fiyatın üstünde mi altında mı diye takip edebilirim. Kısa vadeli momentumu test etmek istersem de ekstra olarak periyodu 20 yaparak ekleyebilirim.
+
+Şu an aşağıdaki grafikte altın düşüş eğiliminde. Aşağısında çok güçlü olmasa da bir destek var (3 defa retest yemiş en azından) ama yukarıdan da düşüş trendi sıkıştırıyor. Ayrıca fiyat her iki ortalamanın da epey altında. EMA, SMA'nın da altında olduğuna göre düşüş eğilimi hâlâ devam ediyor gibi görünüyor. Ağustos ayının ortalarında ya yukarı ya aşağı yönlü hareket yapmak zorunda. Takipte olacağım.
+
+<div style="border-radius:8px; overflow:hidden; border:1px solid rgba(128,128,128,0.3);">
+  <img src="/blog/XAUUSD-Resistance-Trend.png" alt="XAUUSD günlük grafik: düşüş trendi, destek bölgesi ve SMA/EMA çizgileri" style="display:block; width:100%; height:auto;" />
+</div>
+
+**Golden Cross ve Death Cross**
+
+Bu ikisi, iki farklı süreli hareketli ortalamanın (genelde 50 günlük ve 200 günlük) birbirini kesmesiyle oluşur:
+
+- **Golden Cross**: Kısa vadeli ortalama (50 günlük), uzun vadeliyi (200 günlük) aşağıdan yukarı keserse → yaygın olarak boğa (yükseliş) sinyali sayılır
+- **Death Cross**: Tam tersi, kısa vadeli ortalama uzun vadeliyi yukarıdan aşağı keserse → ayı (düşüş) sinyali sayılır
+
+Önemli uyarı: Bu sinyaller gecikmelidir. Geçmiş fiyat verisine dayanır, gerçekleştiğinde trend genelde zaten bir süredir devam ediyordur.
+
+Aşağıdaki grafikte Bitcoin'in 2024 Kasım ayındaki yükselişi ile 2025 Ekim ayındaki düşüşlerini golden cross ve death cross örnekleriyle pekiştirdim.
+
+<div style="border-radius:8px; overflow:hidden; border:1px solid rgba(128,128,128,0.3);">
+  <img src="/blog/golden-cross-death-cross.png" alt="Bitcoin/Dolar grafiği: golden cross ve death cross örnekleri" style="display:block; width:100%; height:auto;" />
+</div>
+
+**RSI (Relative Strength Index)**
+
+RSI, bir varlığın "aşırı alınıp alınmadığını" ölçen 0-100 arası bir gösterge.
+
+- **70 üstü**: Aşırı alım, düzeltme gelebilir
+- **30 altı**: Aşırı satım, tepki gelebilir
+
+Güçlü trendde RSI uzun süre bu bölgelerde kalabilir, bu yüzden tek başına "hemen al/sat" sinyali sayılmaz; diğer göstergelerle birlikte değerlendirilmeli.
+
+RSI ile de bir örnek yapmak istedim, o da şöyle: TEHOL hissesinde son günlerde üst üste yükseliş var. Bunun sebebi ise eski high'a yaklaşmış olması, fotoğraftaki gibi direnci kırması ve yeni high'a ulaşmasıydı. Aşağıdaki RSI tablosunda da görüldüğü üzere aşırı alım bölgesinde bu fiyatlara geldi. Tabii ki aşırı alım göstergesi her zaman fiyatın yükseleceği anlamına gelmez.
+
+<div style="border-radius:8px; overflow:hidden; border:1px solid rgba(128,128,128,0.3);">
+  <img src="/blog/TEHOL-attack.png" alt="TEHOL hisse grafiği ve RSI göstergesi: aşırı alım bölgesi" style="display:block; width:100%; height:auto;" />
+</div>
+
+*Not: Trading ile ilgili notlar kişisel öğrenme sürecimin kaydıdır, yatırım tavsiyesi değildir.*
