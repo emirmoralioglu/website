@@ -28,10 +28,10 @@ export default async function BlogPostPage({ params }: Props) {
         {CATEGORY_LABELS[post.meta.category]}
       </span>
       <h1 className="text-2xl">{post.meta.title}</h1>
-      <p className="text-sm text-black/50 dark:text-white/50">{post.meta.date}</p>
+      <p className="text-sm text-black/70 dark:text-white/70">{post.meta.date}</p>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
       {post.meta.category === "trading" && (
-        <p className="text-sm italic text-black/50 dark:text-white/50">
+        <p className="text-sm italic text-black/70 dark:text-white/70">
           Bu yazı yatırım tavsiyesi değildir, sadece kişisel öğrenme sürecimin bir kaydıdır.
         </p>
       )}

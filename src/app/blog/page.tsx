@@ -28,7 +28,7 @@ export default function BlogPage() {
                 {post.title}
               </h2>
             </Link>
-            <p className="mt-1 text-sm text-black/50 dark:text-white/50">
+            <p className="mt-1 text-sm text-black/70 dark:text-white/70">
               {post.date}
             </p>
             <p className="mt-2 text-black/70 dark:text-white/70">
